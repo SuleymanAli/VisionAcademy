@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- Normalize Css -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<!-- Navigation Menu -->
+	<link rel="stylesheet" href="css/demo.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<!-- Slick JS For Image Gallery -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<!-- Add the new slick-theme.css if you want the default styling -->
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/solid.css">
+	<!-- Animate Css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Test Style -->
+	<!-- <link rel="stylesheet" href="style (1).css"> -->
+
+	<title>Vision Academy</title>
+</head>
+
+<body>
+	<!-- Header Section -->
+	<section class="header">
+		<div>
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<section class="section section--menu" id="Valentine">
+				<nav class="menu menu--valentine">
+					<ul class="menu__list">
+						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Ana Səhifə</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Haqqımızda</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Əlaqə</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
+					</ul>
+				</nav>
+			</section>
+			<div id="mobile-menu" class="d-none">
+				<a href="javascript:void(0)" id="icon">
+					<i class="fas fa-bars fa-2x"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- Main Section -->
+	<section class="main">
+		<div class="balls">
+			<div class="first">
+				<img src="img/main-1.jpg">
+				<div class="hover"></div>
+				<div class="ball-text animated bounce slow">
+					<h2 class="">Kurslarımız</h2>
+				</div>
+			</div>
+			<div class="second">
+				<img src="img/main-2.jpeg">
+				<div class="hover"></div>
+				<div class="ball-text animated bounce slow">
+					<h2>Xaricdə Təhsil</h2>
+				</div>
+			</div>
+			<div class="third">
+				<a href="http://tercume.az" target="_blank">
+					<img src="img/main-3.jpeg">
+					<div class="hover"></div>
+					<div class="ball-text animated bounce slow">
+						<h2>Tərcümə.Az</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- Video Section -->
+	<section class="video">
+		<h1>Video</h1>
+
+		<div class="videoContainer">
+			<iframe width="100%" height="auto" src="http://www.youtube.com/embed/VYCOg-yglNM?enablejsapi=1" frameborder="0"></iframe>
+		</div>
+
+	</section>
+	<!-- Gallery Section -->
+	<section class="galery">
+		<h1>Gallery</h1>
+		<div class="galery-images slider">
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+			<div class="galery-image sl-el">
+				<img src="https://via.placeholder.com/150x150" alt="">
+			</div>
+		</div>
+	</section>
+	<!-- Footer Section -->
+	<section class="footer">
+		<div>
+			<div class="footer-logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="footer-nav">
+				<nav>
+					<li><a href="#">Ana Səhifə</a></li>
+					<li><a href="#">Haqqımızda</a></li>
+					<li><a href="#">Əlaqə</a></li>
+					<li><a href="#">FAQ</a></li>
+				</nav>
+			</div>
+			<div class="footer-mail">
+				<form action="">
+					<input type="text" placeholder="Emailinizi Daxil Edin..">
+					<button type="submit" role="button">Göndər</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Jquery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Navigation Scripts -->
+	<script src="js/classie.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script>
+		(function () {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+				setCurrent = function (ev) {
+					ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+					[].slice.call(menuItems).forEach(function (el) {
+						el.addEventListener('click', setCurrent);
+					});
+				});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' +
+					link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function () {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function () {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+	</script>
+	<!-- Slick JS Scripts For Image Gallery -->
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<!-- Custom Scripts -->
+	<script src="js/main.js"></script>
+</body>
+
+</html>
