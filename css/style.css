@@ -210,14 +210,6 @@ section.footer {
 
 /* Main Section Classes */
 
-.main {
-	background-image: url("../img/background.jpeg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	/*background-color: rgba(255,0,0,0.3);*/
-}
-
 .main .balls {
 	width: 85%;
 	height: 100%;
