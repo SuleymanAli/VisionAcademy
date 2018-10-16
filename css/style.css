@@ -210,6 +210,10 @@ section.footer {
 
 /* Main Section Classes */
 
+.main {
+	background: linear-gradient(#999, white, ghostwhite, whitesmoke, #999);
+}
+
 .main .balls {
 	width: 85%;
 	height: 100%;
