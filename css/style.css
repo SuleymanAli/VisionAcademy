@@ -32,7 +32,6 @@ section.header {
 
 section.main {
 	padding: 19% 0;
-	/*background: #553D67;*/
 }
 
 section.video {
@@ -211,6 +210,14 @@ section.footer {
 
 /* Main Section Classes */
 
+.main {
+	background-image: url("../img/background.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-color: rgba(255,0,0,0.3);*/
+}
+
 .main .balls {
 	width: 85%;
 	height: 100%;
@@ -384,6 +391,7 @@ iframe {
 
 .footer {
 	padding: 2% 0;
+	color: #FFF;
 }
 
 .footer>div {
@@ -402,20 +410,19 @@ iframe {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	width: 80%;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 .footer-logo img {
 	max-width: 100%;
-	width: 60%;
+	width: 80%;
 	height: auto;
 	display: block;
 	align-self: center;
 }
 
-.footer-nav nav {
+.footer-nav {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -424,17 +431,79 @@ iframe {
 	justify-content: center;
 }
 
+.footer-nav nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+}
+
 .footer-nav nav li {
 	list-style: none;
-	margin: 0 2%;
+	width: 40px;
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 3px solid #D8E2DC;
+	transition: all 0.5s ease;
 }
 
-.footer-nav nav li a {
+.footer-nav nav li i {
 	text-decoration: none;
+	color: #fff;
 }
 
-.footer .footer-nav nav li a:hover {
-	color: #4e3c3e;
+.footer .footer-nav nav li:nth-child(1):hover {
+	box-shadow: 0 0 10px #3b5998;
+	border: 3px solid #3b5998;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(1):hover .fa-facebook-f {
+	color: #3b5998;
+	text-shadow: 0 0 15px #3b5998;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(2):hover {
+	box-shadow: 0 0 10px #bc2a8d;
+	border: 3px solid #bc2a8d;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(2):hover .fa-instagram {
+	color: #bc2a8d;
+	text-shadow: 0 0 15px #bc2a8d;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(3):hover {
+	box-shadow: 0 0 10px #dd4b39;
+	border: 3px solid #dd4b39;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(3):hover .fa-envelope {
+	color: #dd4b39;
+	text-shadow: 0 0 15px #dd4b39;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(4):hover {
+	box-shadow: 0 0 10px #0077B5;
+	border: 3px solid #0077B5;
+	transition: all 0.5s ease;
+}
+
+.footer .footer-nav nav li:nth-child(4):hover .fa-linkedin-in {
+	color: #0077B5;
+	text-shadow: 0 0 15px #0077B5;
+	transition: all 0.5s ease;
 }
 
 .footer-contact {
@@ -473,7 +542,7 @@ iframe {
 	}
 
 	.footer .footer-logo img {
-		width: 20%;
+		/*width: 20%;*/
 	}
 
 	.footer .footer-nav {
@@ -491,8 +560,13 @@ iframe {
 		margin-bottom: 5%;
 	}
 
-	.footer .footer-nav nav {
+	.footer-nav {
 		justify-content: flex-start;
+	}
+
+	.footer-nav nav {
+		width: 50%;
+		justify-content: space-around;
 	}
 }
 
@@ -627,8 +701,8 @@ iframe {
 		grid-template-columns: 1fr;
 		grid-template-rows: 2fr 1fr 2fr;
 		grid-template-areas: "logo"
-							 "nav"
-							 "contact";
+		"nav"
+		"contact";
 	}
 
 	.footer .footer-logo {
@@ -637,7 +711,7 @@ iframe {
 	}
 
 	.footer .footer-logo img {
-		width: 30%;
+		width: 50%;
 		margin: 0 auto;
 	}
 
@@ -645,8 +719,13 @@ iframe {
 		grid-area: nav;
 	}
 
-	.footer .footer-nav nav {
+	.footer-nav {
 		justify-content: center;
+	}
+
+	.footer-nav nav {
+		width: 50%;
+		justify-content: space-around;
 	}
 
 	.footer .footer-contact {
@@ -729,6 +808,15 @@ iframe {
 		margin-bottom: 2%;
 	}
 
+	/*.footer-nav {
+		justify-content: flex-start;
+	}
+
+	.footer-nav nav {
+		width: 50%;
+		justify-content: space-around;
+	}
+	*/
 	.footer .footer-contact {
 		grid-area: contact;
 		flex-direction: column;
@@ -753,4 +841,14 @@ iframe {
 		text-align: center;
 		top: 0; left: 0;
 	}
-}
+
+	/*.footer-nav {
+		justify-content: flex-start;
+		}*/
+
+		.footer-nav nav {
+			width: 100%;
+			justify-content: space-around;
+		}
+
+	}
