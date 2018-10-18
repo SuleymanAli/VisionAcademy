@@ -100,13 +100,7 @@
 }
 .slick-initialized .slick-slide
 {
-    /*display: block;*/
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center
+    display: block;
 }
 .slick-loading .slick-slide
 {

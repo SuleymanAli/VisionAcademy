@@ -51,8 +51,9 @@ function stopVideo() {
 }
 
 /* Slick Js */
+
 $(document).ready(function () {
-    $('.slider').slick({
+    $('.galery-images').slick({
         centerMode: true,
         centerPadding: '30px',
         slidesToShow: 5,
@@ -87,6 +88,44 @@ $(document).ready(function () {
             // instead of a settings object
           ]
     });
+
+    $('.news-box-images').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
 });
 
 /* Menu Icon Toggle */
@@ -107,3 +146,15 @@ if (window.matchMedia('(max-width: 768px)').matches)
 {
     $('.balls').addClass('animated slideInLeft slow');
 }
+
+/* Masonry */
+
+// $('.grid').masonry({
+//   // options
+//   itemSelector: '.grid-item',
+//   columnWidth: 200
+// });
+
+/* AOS */
+
+AOS.init();
