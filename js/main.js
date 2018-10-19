@@ -15,8 +15,8 @@ var player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '390',
-        width: '640',
+        height: '100%',
+        width: '100%',
         playerVars: {
             autoplay: 1,
             showinfo: 0,
@@ -126,6 +126,7 @@ $(document).ready(function () {
         // instead of a settings object
       ]
     });
+    
 });
 
 /* Menu Icon Toggle */
