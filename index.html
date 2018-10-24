@@ -31,13 +31,13 @@
 	<section class="header">
 		<div>
 			<div class="logo">
-				<img src="img/logo.png" alt="">
+				<a href="index.html"><img src="img/logo.png" alt=""></a>
 			</div>
 			<section class="section section--menu" id="Valentine">
 				<nav class="menu menu--valentine">
 					<ul class="menu__list">
-						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Ana Səhifə</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Haqqımızda</a></li>
+						<li class="menu__item menu__item--current"><a href="index.html" class="menu__link">Ana Səhifə</a></li>
+						<li class="menu__item"><a href="haqqimizda.html" class="menu__link">Haqqımızda</a></li>
 						<li class="menu__item"><a href="#" class="menu__link">Əlaqə</a></li>
 						<li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
 					</ul>
@@ -54,18 +54,22 @@
 	<section class="main">
 		<div class="balls">
 			<div class="first">
-				<img src="img/main-1.jpg">
-				<div class="hover animated pulse delay-2s"></div>
-				<div class="ball-text animated bounceInLeft delay-2s">
-					<h2>Kurslarımız</h2>
-				</div>
+				<a href="kurslarimiz.html">
+					<img src="img/main-1.jpg">
+					<div class="hover animated pulse delay-2s"></div>
+					<div class="ball-text animated bounceInLeft delay-2s">
+						<h2>Kurslarımız</h2>
+					</div>
+				</a>
 			</div>
 			<div class="second">
-				<img src="img/main-2.jpeg">
-				<div class="hover animated pulse delay-2s"></div>
-				<div class="ball-text animated bounceInLeft delay-2s">
-					<h2>Xaricdə Təhsil</h2>
-				</div>
+				<a href="xaricde-tehsil.html">
+					<img src="img/main-2.jpeg">
+					<div class="hover animated pulse delay-2s"></div>
+					<div class="ball-text animated bounceInLeft delay-2s">
+						<h2>Xaricdə Təhsil</h2>
+					</div>
+				</a>
 			</div>
 			<div class="third">
 				<a href="http://tercume.az" target="_blank">
@@ -118,7 +122,7 @@
 	<section class="footer">
 		<div>
 			<div class="footer-logo">
-				<img src="img/logo.png" alt="">
+				<a href="index.html"><img src="img/logo.png" alt=""></a>
 			</div>
 			<div class="footer-nav">
 				<nav>
@@ -163,46 +167,6 @@
 	</section>
 	<!-- Jquery -->
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<!-- Navigation Scripts -->
-	<script src="js/classie.js"></script>
-	<script src="js/clipboard.min.js"></script>
-	<script>
-		(function () {
-			[].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
-				var menuItems = menu.querySelectorAll('.menu__link'),
-				setCurrent = function (ev) {
-					ev.preventDefault();
-
-						var item = ev.target.parentNode; // li
-
-						// return if already current
-						if (classie.has(item, 'menu__item--current')) {
-							return false;
-						}
-						// remove current
-						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-						// set current
-						classie.add(item, 'menu__item--current');
-					};
-
-					[].slice.call(menuItems).forEach(function (el) {
-						el.addEventListener('click', setCurrent);
-					});
-				});
-
-			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
-				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' +
-					link.parentNode.id);
-				new Clipboard(link);
-				link.addEventListener('click', function () {
-					classie.add(link, 'link-copy--animate');
-					setTimeout(function () {
-						classie.remove(link, 'link-copy--animate');
-					}, 300);
-				});
-			});
-		})(window);
-	</script>
 	<!-- Slick JS Scripts For Image Gallery -->
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<!-- Custom Scripts -->
