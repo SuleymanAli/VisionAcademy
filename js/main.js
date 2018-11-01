@@ -205,3 +205,44 @@ $('.projects-item:nth-child(even)').attr('data-aos', 'fade-right');
 /* AOS */
 
 AOS.init();
+
+/* Show/Less More For Gallery */
+
+$(document).ready(function () {
+  size_li = $("#grid>div").length;
+  x=12;
+  $('#grid>div:lt('+x+')').show();
+  $('#loadMore').click(function () {
+    x= (x+8 <= size_li) ? x+8 : size_li;
+    $('#grid>div:lt('+x+')').show("slow");
+  });
+  $('#showLess').click(function () {
+    x=(x-8<0) ? 12 : x-8;
+    $('#grid>div').not(':lt('+x+')').hide("slow");
+  });
+});
+
+/* Study Abroad Feedback */
+
+$(document).ready(function () {
+  $('#feedback-toggle').click(function () {
+    $('.feedback').toggleClass('feedback-active');
+  })
+
+  if (window.matchMedia('(max-width: 600px)').matches)
+  {
+    $('#feedback-toggle').click(function () {
+      $(this).toggleClass('feedback-toggle-active');
+      console.log('2');
+    })
+  }
+});
+
+
+/* Dropdown */
+
+$(document).ready(function () {
+  $('.menu__item').hover(function() {
+    $(this).children('ul').stop(true, false, true).slideToggle('slow');
+  });
+});

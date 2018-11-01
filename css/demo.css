@@ -196,7 +196,7 @@ a:focus {
 
 .section--menu {
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	/* min-height: 100%; */
 	padding: 1em 0 1em;
 }

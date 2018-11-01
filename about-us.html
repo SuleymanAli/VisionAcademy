@@ -18,6 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="css/solid.css">
 	<!-- Animate Css -->
 	<link rel="stylesheet" href="css/animate.css">
+	<!-- AOS Plugin For Animation -->
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<!-- Custom Styles -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Test Style -->
@@ -28,7 +30,7 @@
 
 <body>
 	<!-- Header Section -->
-	<section class="header">
+	<section class="header header-course">
 		<div>
 			<div class="logo">
 				<a href="index.html"><img src="img/logo.png" alt=""></a>
@@ -36,9 +38,24 @@
 			<section class="section section--menu" id="Valentine">
 				<nav class="menu menu--valentine">
 					<ul class="menu__list">
-						<li class="menu__item menu__item--current"><a href="index.html" class="menu__link">Ana Səhifə</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Əlaqə</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">FAQ</a></li>
+						<li class="menu__item">
+							<a href="xaricde-tehsil.html" class="menu__link">Home Page</a>
+						</li>
+						<li class="menu__item menu__item--current">
+							<a href="about-us.html" class="menu__link">About us</a>
+						</li>
+						<li class="menu__item">
+							<a href="events.html" class="menu__link">Events</a>
+						</li>
+						<li class="menu__item">
+							<a href="faq.html" class="menu__link">FAQ</a>
+						</li>
+						<li class="menu__item">
+							<a href="announcement.html" class="menu__link">Announcement</a>
+						</li>
+						<li class="menu__item">
+							<a href="bloglar.html" class="menu__link">Blog</a>
+						</li>
 					</ul>
 				</nav>
 			</section>
@@ -49,71 +66,19 @@
 			</div>
 		</div>
 	</section>
-	<!-- Main Section -->
-	<section class="main">
-		<div class="balls">
-			<div class="first">
-				<a href="kurslarimiz.html">
-					<img src="img/main-1.jpg">
-					<div class="hover animated pulse delay-2s"></div>
-					<div class="ball-text animated bounceInLeft delay-2s">
-						<h2>Kurslarımız</h2>
-					</div>
-				</a>
+	<!-- About Us Section -->
+	<section class="about-us">
+		<div class="about-us-items">
+			<div class="about-us-text">
+				<h2>Lorem ipsum dolor sit.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quibusdam! Autem maxime blanditiis placeat, iure neque sapiente, dolores perferendis corporis iusto nulla voluptatum voluptatem commodi ut voluptate numquam. Doloremque, esse!</p>
+				<h2>Lorem ipsum dolor sit.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, mollitia neque iure sapiente cupiditate! Cumque ducimus harum numquam, voluptatibus quidem consectetur, esse facilis fuga, vitae modi ea, nisi pariatur consequuntur.</p>
+				<h2>Lorem ipsum dolor sit.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti doloremque eaque animi velit reprehenderit vitae dicta nesciunt enim officia mollitia assumenda, facilis ullam expedita, laborum earum deserunt quis similique voluptate!</p>
 			</div>
-			<div class="second">
-				<a href="xaricde-tehsil.html">
-					<img src="img/main-2.jpeg">
-					<div class="hover animated pulse delay-2s"></div>
-					<div class="ball-text animated bounceInLeft delay-2s">
-						<h2>Xaricdə Təhsil</h2>
-					</div>
-				</a>
-			</div>
-			<div class="third">
-				<a href="http://tercume.az" target="_blank">
-					<img src="img/main-3.jpeg">
-					<div class="hover animated pulse delay-2s"></div>
-					<div class="ball-text animated bounceInLeft delay-2s">
-						<h2>Tərcümə.Az</h2>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-	<!-- Video Section -->
-	<section class="video">
-		<h1>Video</h1>
-
-		<div class="videoContainer">
-			<iframe width="100%" height="auto" src="http://www.youtube.com/embed/VYCOg-yglNM?enablejsapi=1" frameborder="0"></iframe>
-		</div>
-
-	</section>
-	<!-- Gallery Section -->
-	<section class="galery">
-		<h1>Partners</h1>
-		<div class="galery-images slider">
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
-			</div>
-			<div class="galery-image sl-el">
-				<img src="https://via.placeholder.com/200x200" alt="">
+			<div class="about-us-image">
+				<img src="http://via.placeholder.com/500x400" alt="">
 			</div>
 		</div>
 	</section>
@@ -168,6 +133,9 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<!-- Slick JS Scripts For Image Gallery -->
 	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<!-- AOS Plugin For Animation -->
+	<!-- <script src="js/aos.js"></script> -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<!-- Custom Scripts -->
 	<script src="js/main.js"></script>
 </body>
