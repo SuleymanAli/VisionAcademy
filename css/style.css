@@ -2455,6 +2455,80 @@ section.news {
 	display: block;
 }
 
+/* Blog Content Page Classes */
+
+/* Blog Content Section Classes */
+
+.blog-content-section>div {
+	width: 85%;
+	margin: 4% auto;
+}
+
+.blog-content-section .blog-content-image {
+	width: 100%;
+}
+
+.blog-content-section .blog-content-image img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.blog-content-section .blog-content-main {
+	margin: 2% 0;
+}
+
+.blog-content-section .blog-content-main h2 {
+	margin-bottom: 1%;
+}
+
+.blog-content-section .blog-content-main p {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.blog-content-section .comments {
+	
+}
+
+.blog-content-section .comments .comment-type form {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.blog-content-section .comments .comment-type form input,
+.blog-content-section .comments .comment-type form textarea {
+	margin: 0.6em;
+	padding: 0.4em;
+}
+
+.blog-content-section .comments .comment-type form input[type="button"] {
+	align-self: flex-start;
+	background: #0984e3;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #fff;
+	padding: 0.6em 1em;
+}
+
+.blog-content-section .comments .comment-items .comment {
+	background: #0984e3;
+	border-radius: 3px;
+	color: #fff;
+	padding: 0.6em 1em;
+	margin: 0.6em;
+}
+
+.blog-content-section .comments .comment-items .comment p {
+	margin-top: 1%;
+}
+
+
 /* Media Queries */
 
 @media (max-width: 1320px){
