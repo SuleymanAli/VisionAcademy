@@ -22,8 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<!-- Custom Styles -->
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Test Style -->
-	<!-- <link rel="stylesheet" href="style (1).css"> -->
 
 	<title>Vision Academy</title>
 </head>
@@ -55,6 +53,9 @@
 						</li>
 						<li class="menu__item">
 							<a href="bloglar.html" class="menu__link">Blog</a>
+						</li>
+						<li class="menu__item">
+							<a href="qalereya.html" class="menu__link">Gallerry</a>
 						</li>
 					</ul>
 				</nav>
@@ -97,6 +98,7 @@
 	</secttion>
 	<!-- Find Your University Gallery Section -->
 	<section class="find-your-university-gallery">
+		<h1>News</h1>
 		<div class="wrapper">
 			<div class="box box-1">
 				<a href="#">
@@ -174,10 +176,71 @@
 	</section>
 	<!-- Study Abroad News Section -->
 	<section class="study-abroad-news">
+		<div class="button">
+			<div id="loadMore" class="show-more-or-less">
+				<a href="#">Show More</a>
+			</div>
+		</div>
 		<div>
-			<div class="button">
-				<div id="loadMore" class="show-more-or-less">
-					<a href="#">Show More</a>
+			<div class="content">
+				<div class="calendar-container">
+					<div class="calendar"> 
+						<div class="year-header"> 
+							<span class="left-button" id="prev"> &lang; </span> 
+							<span class="year" id="label"></span> 
+							<span class="right-button" id="next"> &rang; </span>
+						</div> 
+						<table class="months-table"> 
+							<tbody>
+								<tr class="months-row">
+									<td class="month">Jan</td> 
+									<td class="month">Feb</td> 
+									<td class="month">Mar</td> 
+									<td class="month">Apr</td> 
+									<td class="month">May</td> 
+									<td class="month">Jun</td> 
+									<td class="month">Jul</td>
+									<td class="month">Aug</td> 
+									<td class="month">Sep</td> 
+									<td class="month">Oct</td>          
+									<td class="month">Nov</td>
+									<td class="month">Dec</td>
+								</tr>
+							</tbody>
+						</table> 
+
+						<table class="days-table"> 
+							<td class="day">Sun</td> 
+							<td class="day">Mon</td> 
+							<td class="day">Tue</td> 
+							<td class="day">Wed</td> 
+							<td class="day">Thu</td> 
+							<td class="day">Fri</td> 
+							<td class="day">Sat</td>
+						</table> 
+						<div class="frame"> 
+							<table class="dates-table"> 
+								<tbody class="tbody">             
+								</tbody> 
+							</table>
+						</div> 
+						<button class="button" id="add-button">Add Event</button>
+					</div>
+				</div>
+				<div class="events-container">
+				</div>
+				<div class="dialog" id="dialog">
+					<h2 class="dialog-header"> Add New Event </h2>
+					<form class="form" id="form">
+						<div class="form-container" align="center">
+							<label class="form-label" id="valueFromMyButton" for="name">Event name</label>
+							<input class="input" type="text" id="name" maxlength="36">
+							<label class="form-label" id="valueFromMyButton" for="count">Number of people to invite</label>
+							<input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+							<input type="button" value="Cancel" class="button" id="cancel-button">
+							<input type="button" value="OK" class="button" id="ok-button">
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -275,60 +338,14 @@
 	<!-- Slick JS Scripts For Image Gallery -->
 	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<!-- AOS Plugin For Animation -->
-	<!-- <script src="js/aos.js"></script> -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<!-- iTyped.js -->
-	<script src="https://unpkg.com/ityped@1.0.3"></script>
-	<!-- Custom Scripts -->
-	<script src="js/main.js"></script>
-
+	<script src="js/aos.js"></script>
+	<!-- Typed Js -->
 	<script src="js/typed.min.js"></script>
+	<!-- Particle Js -->
 	<script src="js/particles/particles.min.js"></script>
 	<script src="js/particles/app.js"></script>
-	<script>
-		var typed = new Typed("#text h2", {
-			strings: [
-			"Universitetinizi <br>Tapın", 
-			"Find <br>Your <br>University"
-			],
-			typeSpeed: 60,
-			// fadeOut: true,
-			// loop: true,
-		});
-
-		var littkeTyped = new Typed("#text p", {
-			strings: [
-			"Be Strong", 
-			"Be Clever"
-			],
-			typeSpeed: 60,
-			startDelay: 6000,
-			// fadeOut: true,
-			loop: true,
-		});
-
-		var $window = $(window);
-		var $elem = $(".wrapper")
-
-		function isScrolledIntoView($elem, $window) {
-			var docViewTop = $window.scrollTop();
-			var docViewBottom = docViewTop + $window.height();
-
-			var elemTop = $elem.offset().top;
-			var elemBottom = elemTop + $elem.height();
-
-			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-		}
-
-
-		$(document).on("scroll", function () {
-			if (isScrolledIntoView($elem, $window)) {
-				$elem.find('.overlay').addClass("study-gallery-animate");
-				$elem.find('img').addClass("study-gallery-img-animate");
-			}
-		});
-
-	</script>
+	<!-- Custom Scripts -->
+	<script src="js/main.js"></script>
 </body>
 
 </html>
