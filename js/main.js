@@ -233,7 +233,6 @@ $(document).ready(function () {
   {
     $('#feedback-toggle').click(function () {
       $(this).toggleClass('feedback-toggle-active');
-      console.log('2');
     })
   }
 });
@@ -243,7 +242,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.menu__item').hover(function() {
-    $(this).children('ul').stop(true, false, true).slideToggle('slow');
+    $(this).children('ul').stop(false, true, false).slideToggle('slow');
   });
 });
 
@@ -284,7 +283,6 @@ function isScrolledIntoView($elem, $window) {
 
   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
-
 
 $(document).on("scroll", function () {
   if (isScrolledIntoView($elem, $window)) {
